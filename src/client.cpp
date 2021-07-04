@@ -37,7 +37,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/laser_scan.hpp>
 
-constexpr auto M_PI{3.1415926535897932384626433832795};
+//constexpr auto M_PI{3.1415926535897932384626433832795};
 
 constexpr float radians_to_degrees(float radians)
 {
