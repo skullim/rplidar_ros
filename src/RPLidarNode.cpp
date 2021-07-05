@@ -102,7 +102,7 @@ RPLidarNode::RPLidarNode(const rclcpp::NodeOptions& options) : rclcpp::Node("rpl
       throw std::runtime_error("Failed to set the scan mode.");
    }
 
-   m_publisher = this->create_publisher<LaserScan>(m_scan_topic, rclcpp::SensorDataQoS());
+   m_publisher = this->create_publisher<LaserScan>(m_scan_topic, rclcpp::QoS(1).best_effort());
 
    m_stop_motor_service = this->create_service<std_srvs::srv::Empty>(
       "stop_motor", std::bind(&RPLidarNode::stop_motor, this, std::placeholders::_1, std::placeholders::_2));
