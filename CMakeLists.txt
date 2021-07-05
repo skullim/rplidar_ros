@@ -71,10 +71,10 @@ ament_auto_add_executable(rplidar src/rplidar.cpp)
 target_link_libraries(rplidar rplidar_node)
 
 install(TARGETS rplidar_client rplidar rplidar_sdk
-        DESTINATION lib/${PROJECT_NAME})
+        DESTINATION lib)
 
 install(DIRECTORY launch rviz config
-        DESTINATION share/${PROJECT_NAME})
+        DESTINATION share)
 
 # Install the shared library composition node
 install(TARGETS rplidar_node
